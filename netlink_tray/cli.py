@@ -1,7 +1,7 @@
 import sys
 import argparse
 from pathlib import Path
-from PyQt5.QtWidgets import QApplication
+from PyQt6.QtWidgets import QApplication
 from netlink_tray.config import load_config, create_default_config
 from netlink_tray.ui import NetlinkTray
 
@@ -55,7 +55,7 @@ def main():
     monitor = NetlinkTray(port=port, polling_interval_ms=interval)
     monitor.show()
     
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
 
 if __name__ == "__main__":
     main()

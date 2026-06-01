@@ -1,6 +1,6 @@
-from PyQt5.QtWidgets import QApplication, QSystemTrayIcon, QMenu, QAction
-from PyQt5.QtGui import QIcon, QPixmap, QColor, QPainter, QPainterPath, QPen, QBrush
-from PyQt5.QtCore import QRectF, Qt, QTimer
+from PyQt6.QtWidgets import QApplication, QSystemTrayIcon, QMenu
+from PyQt6.QtGui import QIcon, QPixmap, QColor, QPainter, QPainterPath, QPen, QBrush, QAction
+from PyQt6.QtCore import QRectF, Qt, QTimer
 from netlink_tray.core import check_port
 
 def create_tunnel_icon(is_active):
@@ -16,12 +16,12 @@ def create_tunnel_icon(is_active):
         color_remote = QColor(0, 191, 255)     # Bright sky blue (Remote Host)
         color_local = QColor(0, 255, 128)      # Bright neon green (Local Host)
         color_arrow = QColor(0, 255, 128)      # Green data flow
-        arrow_style = Qt.SolidLine
+        arrow_style = Qt.PenStyle.SolidLine
     else:
         color_remote = QColor(120, 120, 120)   # Dull gray
         color_local = QColor(120, 120, 120)    # Dull gray
         color_arrow = QColor(230, 70, 70)      # Vibrant red (Disconnected)
-        arrow_style = Qt.DashLine
+        arrow_style = Qt.PenStyle.DashLine
 
     # 1. Draw Local Host (Left): Bold server tower
     rect_local = QRectF(4, 6, 6, 20)
@@ -36,7 +36,7 @@ def create_tunnel_icon(is_active):
     painter.drawRoundedRect(rect_remote, 1.5, 1.5)
     
     # 3. Draw Tunnel/Data Flow (Arrow from Right to Left)
-    pen_arrow = QPen(color_arrow, 3.5, arrow_style, Qt.RoundCap, Qt.RoundJoin)
+    pen_arrow = QPen(color_arrow, 3.5, arrow_style, Qt.PenCapStyle.RoundCap, Qt.PenJoinStyle.RoundJoin)
     painter.setPen(pen_arrow)
     
     # Arrow body
@@ -50,7 +50,7 @@ def create_tunnel_icon(is_active):
     painter.drawPath(path_head)
     
     # 4. Draw internal status indicator lights on servers
-    painter.setPen(Qt.NoPen)
+    painter.setPen(Qt.PenStyle.NoPen)
     painter.setBrush(QBrush(color_local))
     painter.drawEllipse(QRectF(6, 10, 2, 2))
     painter.setBrush(QBrush(color_remote))
