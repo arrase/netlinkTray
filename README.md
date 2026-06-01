@@ -48,8 +48,7 @@ netlink-tray setup
 
 This will:
 1. Create a default configuration file at `~/.config/netlinkTray/config.toml`.
-2. Generate an application menu entry (`~/.local/share/applications/netlink-tray.desktop`).
-3. Generate an autostart entry (`~/.config/autostart/netlink-tray.desktop`) so the monitor launches when you log in.
+2. Generate an autostart entry (`~/.config/autostart/netlink-tray.desktop`) so the monitor launches when you log in.
 
 ## Configuration
 

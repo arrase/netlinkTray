@@ -26,14 +26,6 @@ Icon=network-transmit-receive
         f.write(desktop_content)
     print(f"Created autostart entry at {autostart_file}")
 
-    # Create in applications for app menu
-    apps_dir = Path.home() / ".local" / "share" / "applications"
-    apps_dir.mkdir(parents=True, exist_ok=True)
-    apps_file = apps_dir / "netlink-tray.desktop"
-    with open(apps_file, "w", encoding="utf-8") as f:
-        f.write(desktop_content)
-    print(f"Created application menu entry at {apps_file}")
-
 def handle_setup():
     print("Setting up NetlinkTray...")
     create_default_config()
