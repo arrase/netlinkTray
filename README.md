@@ -31,13 +31,6 @@ If you prefer using `uv` for fast Python package management, you can install it 
 uv tool install git+https://github.com/arrase/netlinkTray.git
 ```
 
-### Local Development (pip)
-To install locally for development, you can clone the repository and install it in editable mode:
-
-```bash
-pip install -e .
-```
-
 ## Setup
 
 Before running the monitor, you must initialize the configuration and desktop files. Run the following command:
