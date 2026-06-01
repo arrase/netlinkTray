@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Exec=/home/devoteam/.local/bin/netlink-tray
-Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true
-Name=Netlink Tray
-Comment=Monitor de puertos TCP/UDP vía Netlink
-Icon=network-transmit-receive

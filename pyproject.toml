@@ -1,18 +1,18 @@
 [project]
 name = "netlink-tray"
 version = "0.1.0"
-description = "Monitor de puertos TCP/UDP orientado a eventos vía Netlink"
+description = "TCP/UDP port monitor using Netlink INET_DIAG"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.11"
 dependencies = [
     "PyQt5>=5.15.0",
 ]
 
 [project.scripts]
-netlink-tray = "netlink_tray:main"
+netlink-tray = "netlink_tray.cli:main"
 
 [tool.setuptools]
-py-modules = ["netlink_tray"]
+packages = ["netlink_tray"]
 
 [build-system]
 requires = ["setuptools>=61.0"]
