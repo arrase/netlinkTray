@@ -13,7 +13,7 @@ A lightweight, system tray application that monitors a specific TCP/UDP port usi
 
 - Linux operating system (requires Netlink socket support)
 - Python 3.11 or higher
-- PyQt5
+- PyQt6
 
 ## Installation
 

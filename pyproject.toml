@@ -5,7 +5,7 @@ description = "TCP/UDP port monitor using Netlink INET_DIAG"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "PyQt6>=6.0.0",
+    "PyQt6>=6.11.0",
 ]
 
 [project.scripts]
