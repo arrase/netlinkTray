@@ -10,7 +10,7 @@ def create_tunnel_icon(is_active):
     pixmap.fill(QColor(0, 0, 0, 0))
     
     painter = QPainter(pixmap)
-    painter.setRenderHint(QPainter.Antialiasing)
+    painter.setRenderHint(QPainter.RenderHint.Antialiasing)
     
     if is_active:
         color_remote = QColor(0, 191, 255)     # Bright sky blue (Remote Host)
