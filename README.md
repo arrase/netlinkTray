@@ -7,7 +7,7 @@ A lightweight, system tray application that monitors a specific TCP/UDP port usi
 - **Netlink INET_DIAG:** Uses kernel-level Netlink diagnostic messages rather than spawning external processes like `netstat` or `ss`, providing a highly efficient and fast way to query socket states.
 - **Configurable:** Automatically loads the monitored port and polling interval from a user-level configuration file (`~/.config/netlinkTray/config.toml`).
 - **System Tray Integration:** Runs silently in the background and displays an intuitive icon in the system tray. The icon visually changes based on the port's activity.
-- **Auto-start Support:** Includes a setup command to automatically create desktop entries for application menus and login autostart.
+- **Auto-start Support:** Includes a setup command to automatically configure the application to run upon login.
 
 ## Requirements
 
@@ -33,7 +33,7 @@ uv tool install git+https://github.com/arrase/netlinkTray.git
 
 ## Setup
 
-Before running the monitor, you must initialize the configuration and desktop files. Run the following command:
+Before running the monitor, you must initialize the configuration and autostart files. Run the following command:
 
 ```bash
 netlink-tray setup
@@ -58,7 +58,7 @@ polling_interval_ms = 1500
 
 ## Usage
 
-If you have completed the setup, the application will automatically run on startup. You can also start it manually from your application launcher (search for "Netlink Tray") or via terminal:
+If you have completed the setup, the application will automatically run on startup. You can also start it manually via terminal:
 
 ```bash
 netlink-tray

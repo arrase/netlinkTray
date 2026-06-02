@@ -36,7 +36,7 @@ def main():
     parser = argparse.ArgumentParser(description="Netlink Tray - Port Monitor")
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
     
-    setup_parser = subparsers.add_parser("setup", help="Initialize configuration and desktop files")
+    setup_parser = subparsers.add_parser("setup", help="Initialize configuration and autostart files")
     
     args = parser.parse_args()
     
